@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="SanyaTaxi - надежный сервис перевозок между городами Европы. Заказывайте легковые, грузовые автомобили и микроавтобусы."
+        />
+        <meta
+            name="keywords"
+            content="такси, перевозки, трансфер, Прага, Вена, Париж"
+        />
+        <meta name="theme-color" content="#1a1a1a" />
+        <title>SanyaTaxi - Сервис перевозок между городами</title>
+        <link rel="stylesheet" href="../styles/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <span class="logo-icon">🚗</span>
+                    <span class="logo-text">EcoMove</span>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="#services" class="nav-link active-link"
+                            >Услуги</a
+                        >
+                    </li>
+                    <li><a href="#vehicles" class="nav-link">Машины</a></li>
+                    <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero+search section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Надежные перевозки по Европе</h1>
+                <p>
+                    Комфортные и безопасные поездки между крупными городами
+                    Европы. От Праги до Парижа - мы везем вас туда, куда нужно.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">поездок в месяц</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9⭐</span>
+                        <span class="stat-label">рейтинг</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">поддержка</span>
+                    </div>
+                </div>
+
+                <div class="search-container">
+                    <h2>Найдите вашу поездку</h2>
+                    <form class="search-form" id="searchForm">
+                        <div class="input-group">
+                            <label for="departure">Место посадки</label>
+                            <input
+                                type="text"
+                                id="departure"
+                                placeholder="Прага, Вена, Париж..."
+                                required
+                                autocomplete="off"
+                            />
+                            <span class="input-icon">📍</span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="swap-btn"
+                            aria-label="Поменять маршрут"
+                            title="Поменять маршрут"
+                        >
+                            ⇆
+                        </button>
+
+                        <div class="input-group">
+                            <label for="destination">Конечная точка</label>
+                            <input
+                                type="text"
+                                id="destination"
+                                placeholder="Куда ехать?"
+                                required
+                                autocomplete="off"
+                            />
+                            <span class="input-icon">🎯</span>
+                        </div>
+
+                        <button type="submit" class="search-btn">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vehicles Section -->
+        <section class="vehicles-section" id="vehicles">
+            <div class="vehicles-container">
+                <h2>Доступные машины</h2>
+                <p class="section-subtitle">
+                    Выберите класс автомобиля, который подходит вам
+                </p>
+
+                <div class="vehicles-grid">
+                    <!-- Легковая машина -->
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="./images/camry.png"
+                                alt="Легковая машина"
+                                loading="lazy"
+                            />
+                            <span class="vehicle-badge">Эконом</span>
+                        </div>
+                        <div class="vehicle-info">
+                            <h3>Легковой автомобиль</h3>
+                            <div class="vehicle-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Марка:</span>
+                                    <span class="detail-value"
+                                        >Toyota Camry</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Класс:</span>
+                                    <span class="detail-value">Premium</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"
+                                        >🧑 Пассажиры:</span
+                                    >
+                                    <span class="detail-value"
+                                        >до 4 человек</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">🧳 Багаж:</span>
+                                    <span class="detail-value">300 л</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-price">
+                                <span class="price-from">от</span>
+                                <span class="price-value">€45</span>
+                                <span class="price-unit">за поездку</span>
+                            </div>
+                            <button class="book-btn">Забронировать</button>
+                        </div>
+                    </article>
+
+                    <!-- Грузовик -->
+                    <article class="vehicle-card featured">
+                        <div class="vehicle-image">
+                            <img
+                                src="./images/van.png"
+                                alt="Грузовой автомобиль"
+                                loading="lazy"
+                            />
+                            <span class="vehicle-badge popular">Популярно</span>
+                        </div>
+                        <div class="vehicle-info">
+                            <h3>Грузовой автомобиль</h3>
+                            <div class="vehicle-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Марка:</span>
+                                    <span class="detail-value">MAN TGX</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Класс:</span>
+                                    <span class="detail-value">Грузовой</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"
+                                        >🧑 Пассажиры:</span
+                                    >
+                                    <span class="detail-value">3 человека</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">🧳 Багаж:</span>
+                                    <span class="detail-value">20 м³</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-price">
+                                <span class="price-from">от</span>
+                                <span class="price-value">€120</span>
+                                <span class="price-unit">за поездку</span>
+                            </div>
+                            <button class="book-btn book-btn-featured">
+                                Забронировать
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Микроавтобус -->
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="./images/minibus.jpg"
+                                alt="Микроавтобус"
+                                loading="lazy"
+                            />
+                            <span class="vehicle-badge">Для групп</span>
+                        </div>
+                        <div class="vehicle-info">
+                            <h3>Микроавтобус</h3>
+                            <div class="vehicle-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Марка:</span>
+                                    <span class="detail-value"
+                                        >Mercedes Sprinter</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Класс:</span>
+                                    <span class="detail-value">Комфорт</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"
+                                        >🧑 Пассажиры:</span
+                                    >
+                                    <span class="detail-value"
+                                        >до 8 человек</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">🧳 Багаж:</span>
+                                    <span class="detail-value">600 л</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-price">
+                                <span class="price-from">от</span>
+                                <span class="price-value">€85</span>
+                                <span class="price-unit">за поездку</span>
+                            </div>
+                            <button class="book-btn">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <h2>Наши путешествия</h2>
+                <p class="section-subtitle">
+                    Посмотрите, как выглядят наши поездки
+                </p>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item large">
+                        <img
+                            src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&h=400&fit=crop"
+                            alt="Дорога через красивый пейзаж"
+                            loading="lazy"
+                        />
+                        <figcaption>Европейские дороги</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=300&h=300&fit=crop"
+                            alt="Салон автомобиля"
+                            loading="lazy"
+                        />
+                        <figcaption>Комфортный салон</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=300&h=300&fit=crop"
+                            alt="Вид на Прагу"
+                            loading="lazy"
+                        />
+                        <figcaption>Прага</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop"
+                            alt="Вена"
+                            loading="lazy"
+                        />
+                        <figcaption>Вена</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item large">
+                        <img
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
+                            alt="Париж и Эйфелева башня"
+                            loading="lazy"
+                        />
+                        <figcaption>Париж</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=300&h=300&fit=crop"
+                            alt="Рассвет на дороге"
+                            loading="lazy"
+                        />
+                        <figcaption>Рассвет в пути</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <!-- About -->
+                    <div class="footer-section">
+                        <h4>SanyaTaxi</h4>
+                        <p>
+                            Надежный партнер в путешествиях по Европе с 2015
+                            года. Комфорт, безопасность и профессионализм в
+                            каждой поездке.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-section">
+                        <h4>Быстрые ссылки</h4>
+                        <ul>
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#vehicles">Машины</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal -->
+                    <div class="footer-section">
+                        <h4>Юридическая информация</h4>
+                        <ul>
+                            <li>
+                                <a href="#privacy"
+                                    >Политика конфиденциальности</a
+                                >
+                            </li>
+                            <li><a href="#terms">Условия пользования</a></li>
+                            <li>
+                                <a href="#agreement"
+                                    >Пользовательское соглашение</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="footer-section">
+                        <h4>Контакты</h4>
+                        <p>📞 +420 721 123 456</p>
+                        <p>📧 info@sanyataxi.com</p>
+                        <p>📍 Прага, Чешская республика</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="Twitter">𝕏</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 SanyaTaxi. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../scripts/main.js"></script>
+    </body>
+</html>
