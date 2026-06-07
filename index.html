@@ -12,48 +12,54 @@
             content="такси, перевозки, трансфер, Прага, Вена, Париж"
         />
         <meta name="theme-color" content="#1a1a1a" />
-        <title>EcoMove - Сервис перевозок между городами</title>
+        <title>Перевозки по Европе</title>
         <link rel="stylesheet" href="styles/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="icon" type="image/x-icon" href="images/logo.png" />
     </head>
     <body>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="navbar-logo">
-                    <span class="logo-icon">🚗</span>
-                    <span class="logo-text">EcoMove</span>
-                </div>
-                <ul class="navbar-menu">
-                    <li>
-                        <a href="#services" class="nav-link active-link"
-                            >Услуги</a
-                        >
-                    </li>
-                    <li><a href="#vehicles" class="nav-link">Машины</a></li>
-                    <li><a href="#gallery" class="nav-link">Галерея</a></li>
-                    <li><a href="#contact" class="nav-link">Контакты</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Hero+search section -->
         <section class="hero" id="home">
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <img
+                                src="images/logo.png"
+                                alt="EcoMove Logo"
+                                class="logo-icon"
+                            />
+                        </a>
+                    </div>
+                    <ul class="navbar-menu">
+                        <li>
+                            <a href="#services" class="nav-link active-link"
+                                >Услуги</a
+                            >
+                        </li>
+                        <li><a href="#vehicles" class="nav-link">Машины</a></li>
+                        <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                        <li>
+                            <a href="#contact" class="nav-link">Контакты</a>
+                        </li>
+                    </ul>
+                    <button class="hamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+
             <div class="hero-content">
-                <h1>Надежные перевозки по Европе</h1>
+                <h1>Трансфер по Европе</h1>
                 <p>
-                    Комфортные и безопасные поездки между крупными городами
-                    Европы. От Праги до Парижа - мы везем вас туда, куда нужно.
+                    между городами Европы с комфортом и безопасностью. Закажите
+                    поездку в Прагу, Вену, Париж и другие города уже сегодня
                 </p>
 
                 <div class="hero-stats">
@@ -113,8 +119,50 @@
             </div>
         </section>
 
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/about.png" alt="About" />
+                </div>
+
+                <div class="about-content">
+                    <p>
+                        EcoMove - это ваш надежный партнер в путешествиях по
+                        Европе. Мы предлагаем комфортные и безопасные перевозки
+                        между городами, включая Прагу, Вену, Париж и многие
+                        другие направления. Наша команда профессиональных
+                        водителей и современный автопарк обеспечивают высокое
+                        качество услуг для каждого клиента. Независимо от того,
+                        планируете ли вы деловую поездку или туристическое
+                        путешествие, мы гарантируем удобство и надежность на
+                        каждом этапе вашего пути.
+                    </p>
+                    <p>
+                        С нами вы можете быть уверены, что ваша поездка будет
+                        комфортной и безопасной. Мы гордимся нашим высоким
+                        рейтингом и положительными отзывами от клиентов, которые
+                        ценят нашу внимательность к деталям и индивидуальный
+                        подход. Закажите поездку сегодня и откройте для себя
+                        новый уровень путешествий по Европе!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="buttons">
+                <button class="glass-btn"><span>Заказать</span></button>
+                <button class="glass-btn"><span>Прайс-лист</span></button>
+                <button class="glass-btn"><span>Галерея</span></button>
+            </div>
+            <div class="contacts">
+                <h2>Свяжитесь с нами</h2>
+                <p>📞 +420 721 123 456</p>
+                <p>📧 info@example.com</p>
+            </div>
+        </section>
         <!-- Vehicles Section -->
-        <section class="vehicles-section" id="vehicles">
+        <!-- <section class="vehicles-section" id="vehicles">
             <div class="vehicles-container">
                 <h2>Доступные машины</h2>
                 <p class="section-subtitle">
@@ -122,7 +170,7 @@
                 </p>
 
                 <div class="vehicles-grid">
-                    <!-- Легковая машина -->
+                    Легковая машина
                     <article class="vehicle-card">
                         <div class="vehicle-image">
                             <img
@@ -167,7 +215,7 @@
                         </div>
                     </article>
 
-                    <!-- Грузовик -->
+                    Грузовик
                     <article class="vehicle-card featured">
                         <div class="vehicle-image">
                             <img
@@ -210,7 +258,7 @@
                         </div>
                     </article>
 
-                    <!-- Микроавтобус -->
+                    Микроавтобус
                     <article class="vehicle-card">
                         <div class="vehicle-image">
                             <img
@@ -258,7 +306,7 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
+        Gallery Section
         <section class="gallery-section" id="gallery">
             <div class="gallery-container">
                 <h2>Наши путешествия</h2>
@@ -322,7 +370,7 @@
                     </figure>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Footer -->
         <footer class="footer" id="contact">
