@@ -1,0 +1,51 @@
+/* About */
+
+.about-section {
+    padding: 3rem 1rem;
+    background: #dcdcdc;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-content p {
+    font-size: 1.3rem;
+    color: #475569;
+    line-height: 1.6;
+    font-family: 'Arial';
+    margin: 2rem 0;
+}
+
+/* Large screens */
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 4rem;
+        margin: 0 auto;
+    }
+
+    .about-image,
+    .about-content {
+        flex: 1;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+}

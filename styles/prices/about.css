@@ -1,0 +1,237 @@
+/* Tarifs */
+
+.pricing-section {
+    padding: 8rem 1rem 4rem 1rem; 
+    background: #121212; 
+    position: relative;
+    color: #ffffff;
+    scroll-margin-top: 4rem; 
+}
+
+.pricing-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(circle at 15% 30%, rgba(255, 140, 66, 0.04) 0%, transparent 60%),
+        radial-gradient(circle at 85% 70%, rgba(139, 92, 246, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #f8fafc;
+}
+
+.pricing-section .section-subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.price-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card:hover {
+    transform: translateY(-12px);
+    border-color: #ff8c42; 
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.price-card.featured {
+    border: 2px solid #ff8c42;
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.price-card.featured:hover {
+    box-shadow: 0 20px 48px rgba(255, 140, 66, 0.25);
+}
+
+.vehicle-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.price-card:hover .vehicle-image img {
+    transform: scale(1.1);
+}
+
+.price-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ff8c42;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.price-badge.popular {
+    background: #10b981;
+}
+
+.price-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #f1f5f9;
+}
+
+.price-details {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #e2e8f0;
+    text-align: right;
+}
+
+.price-amount-block {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 140, 66, 0.08);
+    border-radius: 12px;
+    border-left: 4px solid #ff8c42;
+}
+
+.price-from, .price-unit {
+    font-size: 0.85rem;
+    color: #fdbb2d;
+}
+
+.price-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff8c42;
+}
+
+.book-btn {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    padding: 0.85rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.book-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.book-btn:hover::before {
+    left: 100%;
+}
+
+.book-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.book-btn-featured {
+    background: linear-gradient(135deg, #ff8c42 0%, #ff6b00 100%);
+    border: none;
+}
+
+.book-btn-featured:hover {
+    box-shadow: 0 10px 25px rgba(255, 140, 66, 0.3);
+}
+
+/* Large screens */
+
+@media (min-width: 640px) {
+    .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .pricing-section {
+        padding: 11rem 2rem 6rem 2rem; 
+    }
+
+    .pricing-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .vehicle-image {
+        height: 240px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

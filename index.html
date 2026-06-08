@@ -13,11 +13,20 @@
         />
         <meta name="theme-color" content="#1a1a1a" />
         <title>Перевозки по Европе</title>
-        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/common/variables.css" />
+        <link rel="stylesheet" href="styles/common/animations.css" />
+        <link rel="stylesheet" href="styles/common/base.css" />
+        <link rel="stylesheet" href="styles/common/navbar.css" />
+        <link rel="stylesheet" href="styles/common/footer.css" />
+        <link rel="stylesheet" href="styles/index/hero.css" />
+        <link rel="stylesheet" href="styles/index/search.css" />
+        <link rel="stylesheet" href="styles/index/about.css" />
+        <link rel="stylesheet" href="styles/index/quick-links.css" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
         <link rel="icon" type="image/x-icon" href="images/logo.png" />
@@ -37,14 +46,47 @@
                     </div>
                     <ul class="navbar-menu">
                         <li>
-                            <a href="#services" class="nav-link active-link"
-                                >Услуги</a
-                            >
+                            <a href="#about" class="nav-link">О нас</a>
                         </li>
-                        <li><a href="#vehicles" class="nav-link">Машины</a></li>
-                        <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                        <li>
+                            <a href="/pages/prices.html" class="nav-link">Прайс-лист</a>
+                        </li>
+                        <li><a href="/pages/gallery.html" class="nav-link">Галерея</a></li>
                         <li>
                             <a href="#contact" class="nav-link">Контакты</a>
+                        </li>
+                        <li class="lang-select-container">
+                            <div class="lang-current">
+                                <img
+                                    src="images/ru.png"
+                                    alt="ru"
+                                    class="flag-img"
+                                />
+                                <span>RU</span>
+                            </div>
+
+                            <ul class="lang-dropdown">
+                                <li>
+                                    <a href="#">
+                                        <img
+                                            src="images/ru.png"
+                                            alt="ru"
+                                            class="flag-img"
+                                        />
+                                        <span>Русский</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img
+                                            src="images/en.png"
+                                            alt="en"
+                                            class="flag-img"
+                                        />
+                                        <span>English</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <button class="hamburger" aria-label="Toggle menu">
@@ -119,7 +161,7 @@
             </div>
         </section>
 
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="about-container">
                 <div class="about-image">
                     <img src="images/about.png" alt="About" />
@@ -151,9 +193,9 @@
 
         <section class="quick-links">
             <div class="buttons">
-                <button class="glass-btn"><span>Заказать</span></button>
-                <button class="glass-btn"><span>Прайс-лист</span></button>
-                <button class="glass-btn"><span>Галерея</span></button>
+                <a class="glass-btn" href="#home"><span>Заказать</span></a>
+                <a class="glass-btn" href="pages/prices.html"><span>Прайс-лист</span></a>
+                <a class="glass-btn" href="pages/gallery.html"><span>Галерея</span></a>
             </div>
             <div class="contacts">
                 <h2>Свяжитесь с нами</h2>
@@ -161,222 +203,10 @@
                 <p>📧 info@example.com</p>
             </div>
         </section>
-        <!-- Vehicles Section -->
-        <!-- <section class="vehicles-section" id="vehicles">
-            <div class="vehicles-container">
-                <h2>Доступные машины</h2>
-                <p class="section-subtitle">
-                    Выберите класс автомобиля, который подходит вам
-                </p>
 
-                <div class="vehicles-grid">
-                    Легковая машина
-                    <article class="vehicle-card">
-                        <div class="vehicle-image">
-                            <img
-                                src="./images/camry.png"
-                                alt="Легковая машина"
-                                loading="lazy"
-                            />
-                            <span class="vehicle-badge">Эконом</span>
-                        </div>
-                        <div class="vehicle-info">
-                            <h3>Легковой автомобиль</h3>
-                            <div class="vehicle-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Марка:</span>
-                                    <span class="detail-value"
-                                        >Toyota Camry</span
-                                    >
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Класс:</span>
-                                    <span class="detail-value">Premium</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label"
-                                        >🧑 Пассажиры:</span
-                                    >
-                                    <span class="detail-value"
-                                        >до 4 человек</span
-                                    >
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🧳 Багаж:</span>
-                                    <span class="detail-value">300 л</span>
-                                </div>
-                            </div>
-                            <div class="vehicle-price">
-                                <span class="price-from">от</span>
-                                <span class="price-value">€45</span>
-                                <span class="price-unit">за поездку</span>
-                            </div>
-                            <button class="book-btn">Забронировать</button>
-                        </div>
-                    </article>
-
-                    Грузовик
-                    <article class="vehicle-card featured">
-                        <div class="vehicle-image">
-                            <img
-                                src="./images/van.png"
-                                alt="Грузовой автомобиль"
-                                loading="lazy"
-                            />
-                            <span class="vehicle-badge popular">Популярно</span>
-                        </div>
-                        <div class="vehicle-info">
-                            <h3>Грузовой автомобиль</h3>
-                            <div class="vehicle-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Марка:</span>
-                                    <span class="detail-value">MAN TGX</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Класс:</span>
-                                    <span class="detail-value">Грузовой</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label"
-                                        >🧑 Пассажиры:</span
-                                    >
-                                    <span class="detail-value">3 человека</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🧳 Багаж:</span>
-                                    <span class="detail-value">20 м³</span>
-                                </div>
-                            </div>
-                            <div class="vehicle-price">
-                                <span class="price-from">от</span>
-                                <span class="price-value">€120</span>
-                                <span class="price-unit">за поездку</span>
-                            </div>
-                            <button class="book-btn book-btn-featured">
-                                Забронировать
-                            </button>
-                        </div>
-                    </article>
-
-                    Микроавтобус
-                    <article class="vehicle-card">
-                        <div class="vehicle-image">
-                            <img
-                                src="./images/minibus.jpg"
-                                alt="Микроавтобус"
-                                loading="lazy"
-                            />
-                            <span class="vehicle-badge">Для групп</span>
-                        </div>
-                        <div class="vehicle-info">
-                            <h3>Микроавтобус</h3>
-                            <div class="vehicle-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Марка:</span>
-                                    <span class="detail-value"
-                                        >Mercedes Sprinter</span
-                                    >
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Класс:</span>
-                                    <span class="detail-value">Комфорт</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label"
-                                        >🧑 Пассажиры:</span
-                                    >
-                                    <span class="detail-value"
-                                        >до 8 человек</span
-                                    >
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🧳 Багаж:</span>
-                                    <span class="detail-value">600 л</span>
-                                </div>
-                            </div>
-                            <div class="vehicle-price">
-                                <span class="price-from">от</span>
-                                <span class="price-value">€85</span>
-                                <span class="price-unit">за поездку</span>
-                            </div>
-                            <button class="book-btn">Забронировать</button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        Gallery Section
-        <section class="gallery-section" id="gallery">
-            <div class="gallery-container">
-                <h2>Наши путешествия</h2>
-                <p class="section-subtitle">
-                    Посмотрите, как выглядят наши поездки
-                </p>
-
-                <div class="gallery-grid">
-                    <figure class="gallery-item large">
-                        <img
-                            src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&h=400&fit=crop"
-                            alt="Дорога через красивый пейзаж"
-                            loading="lazy"
-                        />
-                        <figcaption>Европейские дороги</figcaption>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <img
-                            src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=300&h=300&fit=crop"
-                            alt="Салон автомобиля"
-                            loading="lazy"
-                        />
-                        <figcaption>Комфортный салон</figcaption>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <img
-                            src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=300&h=300&fit=crop"
-                            alt="Вид на Прагу"
-                            loading="lazy"
-                        />
-                        <figcaption>Прага</figcaption>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <img
-                            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop"
-                            alt="Вена"
-                            loading="lazy"
-                        />
-                        <figcaption>Вена</figcaption>
-                    </figure>
-
-                    <figure class="gallery-item large">
-                        <img
-                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
-                            alt="Париж и Эйфелева башня"
-                            loading="lazy"
-                        />
-                        <figcaption>Париж</figcaption>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <img
-                            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=300&h=300&fit=crop"
-                            alt="Рассвет на дороге"
-                            loading="lazy"
-                        />
-                        <figcaption>Рассвет в пути</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Footer -->
         <footer class="footer" id="contact">
             <div class="footer-container">
                 <div class="footer-grid">
-                    <!-- About -->
                     <div class="footer-section">
                         <h4>EcoMove</h4>
                         <p>
@@ -386,7 +216,6 @@
                         </p>
                     </div>
 
-                    <!-- Quick Links -->
                     <div class="footer-section">
                         <h4>Быстрые ссылки</h4>
                         <ul>
@@ -397,7 +226,6 @@
                         </ul>
                     </div>
 
-                    <!-- Legal -->
                     <div class="footer-section">
                         <h4>Юридическая информация</h4>
                         <ul>
@@ -415,7 +243,6 @@
                         </ul>
                     </div>
 
-                    <!-- Contact -->
                     <div class="footer-section">
                         <h4>Контакты</h4>
                         <p>📞 +420 721 123 456</p>

@@ -1,0 +1,124 @@
+/* Hero */
+
+.hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../../images/hero.jpg') center / cover no-repeat fixed #0c0c0c;
+    background-attachment: fixed;
+    color: white;
+    padding: 8rem 1rem 4rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    will-change: transform;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(255, 140, 66, 0.1) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(139, 92, 246, 0.1) 0%,
+            transparent 50%
+        );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #e0e7ff;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.537);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fbbf24;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #bfdbfe;
+    margin-top: 0.25rem;
+}
+
+/* Large screens */
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 11rem 2rem 6rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        max-width: 800px;
+    }
+
+    .hero-stats {
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .stat {
+        padding: 1.2rem 2.5rem;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="EcoMove - надежный сервис перевозок между городами Европы. Заказывайте легковые, грузовые автомобили и микроавтобусы."
+        />
+        <meta
+            name="keywords"
+            content="такси, перевозки, трансфер, Прага, Вена, Париж"
+        />
+        <meta name="theme-color" content="#1a1a1a" />
+        <title>Перевозки по Европе</title>
+        <link rel="stylesheet" href="../styles/common/variables.css" />
+        <link rel="stylesheet" href="../styles/common/animations.css" />
+        <link rel="stylesheet" href="../styles/common/base.css" />
+        <link rel="stylesheet" href="../styles/common/navbar.css" />
+        <link rel="stylesheet" href="../styles/common/footer.css" />
+
+        <link rel="stylesheet" href="../styles/prices/about.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/x-icon" href="../images/logo.png" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img
+                            src="../images/logo.png"
+                            alt="EcoMove Logo"
+                            class="logo-icon"
+                        />
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="../index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">Прайс-лист</a>
+                    </li>
+                    <li><a href="../pages/gallery.html" class="nav-link">Галерея</a></li>
+                    <li>
+                        <a href="#contact" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="lang-select-container">
+                        <div class="lang-current">
+                            <img
+                                src="../images/ru.png"
+                                alt="ru"
+                                class="flag-img"
+                            />
+                            <span>RU</span>
+                        </div>
+
+                        <ul class="lang-dropdown">
+                            <li>
+                                <a href="#">
+                                    <img
+                                        src="../images/ru.png"
+                                        alt="ru"
+                                        class="flag-img"
+                                    />
+                                    <span>Русский</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img
+                                        src="../images/en.png"
+                                        alt="en"
+                                        class="flag-img"
+                                    />
+                                    <span>English</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <section class="pricing-section" id="vehicles">
+            <div class="pricing-container">
+                <h2>Доступные машины и тарифы</h2>
+                <p class="section-subtitle">
+                    Выберите класс автомобиля, который подходит именно вам.
+                    Фиксированная цена без скрытых доплат.
+                </p>
+
+                <div class="pricing-grid">
+                    <article class="price-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="../images/camry.png"
+                                alt="Легковой автомобиль"
+                                loading="lazy"
+                            />
+                            <span class="price-badge">Эконом</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Легковой автомобиль</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Марка:</span>
+                                    <span class="detail-value"
+                                        >Toyota Camry</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Класс:</span>
+                                    <span class="detail-value">Premium</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"
+                                        >Пассажиры:</span
+                                    >
+                                    <span class="detail-value"
+                                        >4 человека</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Багаж:</span>
+                                    <span class="detail-value">4 чемодана</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">от</span>
+                                <span class="price-value">€45</span>
+                                <span class="price-unit">за поездку</span>
+                            </div>
+                            <button class="book-btn">Забронировать</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card featured">
+                        <div class="vehicle-image">
+                            <img
+                                src="../images/van.png"
+                                alt="Грузовой автомобиль"
+                                loading="lazy"
+                            />
+                            <span class="price-badge popular">Популярно</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Грузовой автомобиль</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Марка:</span>
+                                    <span class="detail-value">MAN TGX</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Класс:</span>
+                                    <span class="detail-value">Грузовой</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"
+                                        >Пассажиры:</span
+                                    >
+                                    <span class="detail-value">3 человека</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Багаж:</span>
+                                    <span class="detail-value">16 чемоданов</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">от</span>
+                                <span class="price-value">€80</span>
+                                <span class="price-unit">за поездку</span>
+                            </div>
+                            <button class="book-btn book-btn-featured">
+                                Забронировать
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="../images/minibus.jpg"
+                                alt="Микроавтобус"
+                                loading="lazy"
+                            />
+                            <span class="price-badge">Для групп</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Микроавтобус</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Марка:</span>
+                                    <span class="detail-value"
+                                        >Mercedes Sprinter</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Класс:</span>
+                                    <span class="detail-value">Комфорт</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"
+                                        >Пассажиры:</span
+                                    >
+                                    <span class="detail-value"
+                                        >10 человек</span
+                                    >
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Багаж:</span>
+                                    <span class="detail-value">54 чемодана</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">от</span>
+                                <span class="price-value">€115</span>
+                                <span class="price-unit">за поездку</span>
+                            </div>
+                            <button class="book-btn">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h4>EcoMove</h4>
+                        <p>
+                            Надежный партнер в путешествиях по Европе с 2015
+                            года. Комфорт, безопасность и профессионализм в
+                            каждой поездке.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Быстрые ссылки</h4>
+                        <ul>
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#vehicles">Машины</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Юридическая информация</h4>
+                        <ul>
+                            <li>
+                                <a href="#privacy"
+                                    >Политика конфиденциальности</a
+                                >
+                            </li>
+                            <li><a href="#terms">Условия пользования</a></li>
+                            <li>
+                                <a href="#agreement"
+                                    >Пользовательское соглашение</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Контакты</h4>
+                        <p>📞 +420 721 123 456</p>
+                        <p>📧 info@EcoMove.com</p>
+                        <p>📍 Прага, Чешская республика</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="Twitter">𝕏</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 EcoMove. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="../scripts/main.js"></script>
+    </body>
+</html>

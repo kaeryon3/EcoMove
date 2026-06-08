@@ -1,31 +1,3 @@
-// Swap button functionality
-const swapBtn = document.querySelector('.swap-btn');
-const departureInput = document.getElementById('departure');
-const destinationInput = document.getElementById('destination');
-
-swapBtn.addEventListener('click', () => {
-    const temp = departureInput.value;
-    departureInput.value = destinationInput.value;
-    destinationInput.value = temp;
-});
-
-// Search form submission
-const searchForm = document.getElementById('searchForm');
-searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const departure = departureInput.value.trim();
-    const destination = destinationInput.value.trim();
-
-    if (departure && destination) {
-        console.log(`Поиск поездки: ${departure} → ${destination}`);
-        alert(
-            `Вы ищете поездку:\n${departure} → ${destination}\n\nФункциональность будет дополнена позже.`,
-        );
-    } else {
-        alert('Пожалуйста, заполните оба поля!');
-    }
-});
-
 // Book button handlers
 const bookBtns = document.querySelectorAll('.book-btn');
 bookBtns.forEach((btn) => {
@@ -142,13 +114,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Логирование для SEO и аналитики (в реальном приложении используйте Google Analytics)
-window.addEventListener('load', () => {
-    console.log('SanyaTaxi сайт загружен успешно');
-    console.log('Платформа:', navigator.platform);
-    console.log('Разрешение:', `${window.innerWidth}x${window.innerHeight}`);
-});
-
 // Debounce функция для оптимизации поиска
 function debounce(func, wait) {
     let timeout;
@@ -161,16 +126,3 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-
-// Поиск с debounce
-const debouncedSearch = debounce((value) => {
-    console.log('Поиск:', value);
-}, 300);
-
-departureInput.addEventListener('input', (e) => {
-    debouncedSearch(e.target.value);
-});
-
-destinationInput.addEventListener('input', (e) => {
-    debouncedSearch(e.target.value);
-});
