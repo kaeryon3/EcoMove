@@ -1,6 +1,6 @@
 /* Routes */
 
-.routes-section {
+.mini-routes-section {
     padding: 8rem 1rem 4rem 1rem; 
     background: #121212; 
     position: relative;
@@ -8,31 +8,21 @@
     scroll-margin-top: 4rem; 
 }
 
-.routes-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background:
-        radial-gradient(circle at 80% 20%, rgba(255, 140, 66, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-.routes-container {
+.mini-routes-container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
-.routes-section h2 {
+.mini-routes-section h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     text-align: center;
     color: #f8fafc;
 }
 
-.routes-section .section-subtitle {
+.mini-routes-section .section-subtitle {
     text-align: center;
     color: #94a3b8;
     margin-bottom: 3rem;
@@ -42,218 +32,96 @@
     margin-right: auto;
 }
 
-.routes-grid {
+.mini-routes-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.route-card {
+.mini-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mini-card:hover {
+    background: rgba(255, 140, 66, 0.05);
+    border-color: #ff8c42;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mini-card.featured {
+    border-color: rgba(255, 140, 66, 0.4);
+    background: linear-gradient(90deg, rgba(255, 140, 66, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.mini-info {
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 0;
 }
 
-.route-card:hover {
-    transform: translateY(-12px);
-    border-color: #ff8c42; 
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-.route-card.featured {
-    border: 2px solid #ff8c42;
-    background: linear-gradient(135deg, rgba(255, 140, 66, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
-}
-
-.route-card.featured:hover {
-    box-shadow: 0 20px 48px rgba(255, 140, 66, 0.25);
-}
-
-.route-image {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-    background: #1e293b;
-}
-
-.route-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    opacity: 0.9;
-}
-
-.route-card:hover .route-image img {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-.route-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #3b82f6;
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.route-badge.popular {
-    background: #ff8c42;
-}
-
-.route-badge.picturesque {
-    background: #8b5cf6;
-}
-
-.route-info {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.route-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
+.mini-info h3 {
+    font-size: 1.1rem;
+    margin: 0;
     color: #f1f5f9;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.route-info h3 .arrow {
+.mini-info h3 .arrow {
     color: #ff8c42;
-    font-size: 1.1rem;
-}
-
-.route-details {
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.detail-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.detail-item:last-child {
-    border-bottom: none;
-}
-
-.detail-label {
-    font-weight: 500;
-    color: #94a3b8;
     font-size: 0.9rem;
 }
 
-.detail-value {
-    font-weight: 600;
-    color: #e2e8f0;
-    text-align: right;
-    font-size: 0.9rem;
-}
-
-.route-price-block {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: rgba(255, 140, 66, 0.08);
-    border-radius: 12px;
-    border-left: 4px solid #ff8c42;
-}
-
-.price-from, .price-unit {
+.mini-dist {
     font-size: 0.85rem;
-    color: #fdbb2d;
+    color: #94a3b8;
 }
 
-.price-value {
-    font-size: 1.8rem;
+.mini-price-box {
     font-weight: 700;
+    font-size: 1.1rem;
     color: #ff8c42;
-}
-
-.book-btn {
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    color: white;
-    padding: 0.85rem;
+    background: rgba(255, 140, 66, 0.1);
+    padding: 0.4rem 0.8rem;
     border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.book-btn::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%;
-    width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
-}
-
-.book-btn:hover::before {
-    left: 100%;
-}
-
-.book-btn:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-.book-btn-featured {
-    background: linear-gradient(135deg, #ff8c42 0%, #ff6b00 100%);
-    border: none;
-}
-
-.book-btn-featured:hover {
-    box-shadow: 0 10px 25px rgba(255, 140, 66, 0.3);
-}
-
-/* Large Screens */
+/* Large screens */
 
 @media (min-width: 640px) {
-    .routes-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .mini-routes-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 768px) {
-    .routes-section {
+@media (min-width: 992px) {
+    .mini-routes-section {
         padding: 11rem 2rem 6rem 2rem; 
     }
 
-    .routes-section h2 {
-        font-size: 2.5rem;
+    .mini-info h3 {
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
 
-    .route-image {
-        height: 240px; 
-    }
-    
-    .routes-grid {
+    .mini-routes-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem; 
     }
 }

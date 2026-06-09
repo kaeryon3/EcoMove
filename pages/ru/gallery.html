@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="EcoMove - надежный сервис перевозок между городами Европы. Заказывайте легковые, грузовые автомобили и микроавтобусы."
+        />
+        <meta
+            name="keywords"
+            content="такси, перевозки, трансфер, Прага, Вена, Париж"
+        />
+        <meta name="theme-color" content="#1a1a1a" />
+        <title>Перевозки по Европе</title>
+        <link rel="stylesheet" href="../../styles/common/variables.css" />
+        <link rel="stylesheet" href="../../styles/common/animations.css" />
+        <link rel="stylesheet" href="../../styles/common/base.css" />
+        <link rel="stylesheet" href="../../styles/common/navbar.css" />
+        <link rel="stylesheet" href="../../styles/common/footer.css" />
+
+        <link rel="stylesheet" href="../../styles/gallery/about.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/x-icon" href="../../images/logo.png" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="../../index.html">
+                        <img
+                            src="../../images/logo.png"
+                            alt="EcoMove Logo"
+                            class="logo-icon"
+                        />
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="main.html" class="nav-link">Главная</a>
+                    </li>
+                    <li>
+                        <a href="routes.html" class="nav-link">Маршруты</a>
+                    </li>
+                    <li>
+                        <a href="prices.html" class="nav-link">Тарифы</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html" class="nav-link">Галерея</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="lang-select-container">
+                        <div class="lang-current">
+                            <img
+                                src="../../images/ru.png"
+                                alt="ru"
+                                class="flag-img"
+                            />
+                            <span>RU</span>
+                        </div>
+
+                        <ul class="lang-dropdown">
+                            <li>
+                                <a href="#">
+                                    <img
+                                        src="../../images/ru.png"
+                                        alt="ru"
+                                        class="flag-img"
+                                    />
+                                    <span>Русский</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../en/gallery.html">
+                                    <img
+                                        src="../../images/en.png"
+                                        alt="en"
+                                        class="flag-img"
+                                    />
+                                    <span>English</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <h2>Наши путешествия</h2>
+                <p class="section-subtitle">
+                    Посмотрите, как выглядят наши поездки по знаковым маршрутам
+                    Европы
+                </p>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item large">
+                        <img
+                            src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&h=400&fit=crop"
+                            alt="Дорога через красивый пейзаж"
+                            loading="lazy"
+                        />
+                        <figcaption>Европейские дороги</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=300&h=300&fit=crop"
+                            alt="Салон автомобиля"
+                            loading="lazy"
+                        />
+                        <figcaption>Комфортный салон</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=300&h=300&fit=crop"
+                            alt="Вид на Прагу"
+                            loading="lazy"
+                        />
+                        <figcaption>Прага</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop"
+                            alt="Вена"
+                            loading="lazy"
+                        />
+                        <figcaption>Вена</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item large">
+                        <img
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
+                            alt="Париж и Эйфелева башня"
+                            loading="lazy"
+                        />
+                        <figcaption>Париж</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=300&h=300&fit=crop"
+                            alt="Рассвет на дороге"
+                            loading="lazy"
+                        />
+                        <figcaption>Рассвет в пути</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h4>EcoMove</h4>
+                        <p>
+                            Надежный партнер в путешествиях по Европе с 2021
+                            года. Комфорт, безопасность и профессионализм в
+                            каждой поездке
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Быстрые ссылки</h4>
+                        <ul>
+                            <li><a href="../index.html">Главная</a></li>
+                            <li><a href="../pages/routes.html">Маршруты</a></li>
+                            <li><a href="../pages/prices.html">Тарифы</a></li>
+                            <li><a href="./gallery.html">Галерея</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Юридическая информация</h4>
+                        <ul>
+                            <li>
+                                <a href="../pages/privacy.html"
+                                    >Политика конфиденциальности</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../pages/terms.html"
+                                    >Условия пользования</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../pages/agreement.html"
+                                    >Пользовательское соглашение</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Контакты</h4>
+                        <p>📞 +420 *********</p>
+                        <p>📧 info@*****.com</p>
+                        <p>📍 Прага, Чешская республика</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 EcoMove. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="../../scripts/hamburger.js"></script>
+    </body>
+</html>

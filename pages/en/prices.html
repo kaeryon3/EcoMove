@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="EcoMove - a reliable intercity transfer service across Europe. Book cars, freight vehicles, and minibuses."
+        />
+        <meta
+            name="keywords"
+            content="taxi, transport, transfer, Prague, Vienna, Paris"
+        />
+        <meta name="theme-color" content="#1a1a1a" />
+        <title>Transportation in Europe</title>
+        <link rel="stylesheet" href="../../styles/common/variables.css" />
+        <link rel="stylesheet" href="../../styles/common/animations.css" />
+        <link rel="stylesheet" href="../../styles/common/base.css" />
+        <link rel="stylesheet" href="../../styles/common/navbar.css" />
+        <link rel="stylesheet" href="../../styles/common/footer.css" />
+
+        <link rel="stylesheet" href="../../styles/prices/about.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/x-icon" href="../../images/logo.png" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="../../index.html">
+                        <img
+                            src="../../images/logo.png"
+                            alt="EcoMove Logo"
+                            class="logo-icon"
+                        />
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="../../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="routes.html" class="nav-link">Routes</a>
+                    </li>
+                    <li>
+                        <a href="prices.html" class="nav-link">Prices</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contacts</a>
+                    </li>
+                    <li class="lang-select-container">
+                        <div class="lang-current">
+                            <img
+                                src="../../images/en.png"
+                                alt="en"
+                                class="flag-img"
+                            />
+                            <span>EN</span>
+                        </div>
+
+                        <ul class="lang-dropdown">
+                            <li>
+                                <a href="#">
+                                    <img
+                                        src="../../images/en.png"
+                                        alt="en"
+                                        class="flag-img"
+                                    />
+                                    <span>English</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../ru/prices.html">
+                                    <img
+                                        src="../../images/ru.png"
+                                        alt="ru"
+                                        class="flag-img"
+                                    />
+                                    <span>Русский</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <section class="pricing-section" id="vehicles">
+            <div class="pricing-container">
+                <h2>Available Vehicles and Prices</h2>
+                <p class="section-subtitle">
+                    Choose the car class that suits you best.
+                    Fixed prices with no hidden fees.
+                </p>
+
+                <div class="pricing-grid">
+                    <article class="price-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="../../images/octavia.png"
+                                alt="Passenger car"
+                                loading="lazy"
+                            />
+                            <span class="price-badge">Economy</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Skoda Octavia</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Model:</span>
+                                    <span class="detail-value">Skoda Octavia A7</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class:</span>
+                                    <span class="detail-value">Economy</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers:</span>
+                                    <span class="detail-value">5 people</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Luggage:</span>
+                                    <span class="detail-value">3 suitcases</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">from</span>
+                                <span class="price-value">€27</span>
+                                <span class="price-unit">per trip</span>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card featured">
+                        <div class="vehicle-image">
+                            <img
+                                src="../../images/camry.png"
+                                alt="Passenger car"
+                                loading="lazy"
+                            />
+                            <span class="price-badge popular">Popular</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Toyota Camry</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Model:</span>
+                                    <span class="detail-value">Toyota Camry XV70</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class:</span>
+                                    <span class="detail-value">Standard</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers:</span>
+                                    <span class="detail-value">4 people</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Luggage:</span>
+                                    <span class="detail-value">4 suitcases</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">from</span>
+                                <span class="price-value">€35</span>
+                                <span class="price-unit">per trip</span>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="../../images/s-class.png"
+                                alt="Passenger car"
+                                loading="lazy"
+                            />
+                            <span class="price-badge">Business</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Mercedes-Benz S-Class</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Model:</span>
+                                    <span class="detail-value">Mercedes-Benz S-Class W223</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class:</span>
+                                    <span class="detail-value">Business</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers:</span>
+                                    <span class="detail-value">4 people</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Luggage:</span>
+                                    <span class="detail-value">2 suitcases</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">from</span>
+                                <span class="price-value">€45</span>
+                                <span class="price-unit">per trip</span>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="../../images/v-class.png"
+                                alt="Passenger car"
+                                loading="lazy"
+                            />
+                            <span class="price-badge">Business</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Mercedes-Benz V-Class</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Model:</span>
+                                    <span class="detail-value">Mercedes-Benz V-Class V250d</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class:</span>
+                                    <span class="detail-value">Business</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers:</span>
+                                    <span class="detail-value">8 people</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Luggage:</span>
+                                    <span class="detail-value">10 suitcases</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">from</span>
+                                <span class="price-value">€55</span>
+                                <span class="price-unit">per trip</span>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <div class="vehicle-image">
+                            <img
+                                src="../../images/vito.png"
+                                alt="Passenger car"
+                                loading="lazy"
+                            />
+                            <span class="price-badge">Cargo</span>
+                        </div>
+                        <div class="price-info">
+                            <h3>Mercedes-Benz Vito</h3>
+                            <div class="price-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Model:</span>
+                                    <span class="detail-value">Mercedes-Benz Vito W447</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class:</span>
+                                    <span class="detail-value">Cargo</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers:</span>
+                                    <span class="detail-value">8 people</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Luggage:</span>
+                                    <span class="detail-value">10 suitcases</span>
+                                </div>
+                            </div>
+
+                            <div class="price-amount-block">
+                                <span class="price-from">from</span>
+                                <span class="price-value">€40</span>
+                                <span class="price-unit">per trip</span>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h4>EcoMove</h4>
+                        <p>
+                            A reliable partner in European travel since 2021.
+                            Comfort, safety, and professionalism in every trip.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../../pages/routes.html">Routes</a></li>
+                            <li><a href="./prices.html">Prices</a></li>
+                            <li><a href="../../pages/gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Legal Information</h4>
+                        <ul>
+                            <li>
+                                <a href="../pages/privacy.html">Privacy Policy</a>
+                            </li>
+                            <li><a href="../pages/terms.html">Terms of Use</a></li>
+                            <li>
+                                <a href="../pages/agreement.html">User Agreement</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Contacts</h4>
+                        <p>📞 +420 *********</p>
+                        <p>📧 info@*****.com</p>
+                        <p>📍 Prague, Czech Republic</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 EcoMove. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="../../scripts/hamburger.js"></script>
+    </body>
+</html>

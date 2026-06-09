@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="EcoMove - reliable intercity transfer service in Europe. Book cars, vans, and minibuses."
+        />
+        <meta
+            name="keywords"
+            content="taxi, transfers, transport, Prague, Vienna, Paris"
+        />
+        <meta name="theme-color" content="#1a1a1a" />
+        <title>European Transfers</title>
+        <link rel="stylesheet" href="../../styles/common/variables.css" />
+        <link rel="stylesheet" href="../../styles/common/animations.css" />
+        <link rel="stylesheet" href="../../styles/common/base.css" />
+        <link rel="stylesheet" href="../../styles/common/navbar.css" />
+        <link rel="stylesheet" href="../../styles/common/footer.css" />
+
+        <link rel="stylesheet" href="../../styles/routes/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/x-icon" href="../../images/logo.png" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="../../index.html">
+                        <img
+                            src="../../images/logo.png"
+                            alt="EcoMove Logo"
+                            class="logo-icon"
+                        />
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="../../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="routes.html" class="nav-link">Routes</a>
+                    </li>
+                    <li>
+                        <a href="prices.html" class="nav-link"
+                            >Prices</a
+                        >
+                    </li>
+                    <li>
+                        <a href="gallery.html" class="nav-link"
+                            >Gallery</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contacts</a>
+                    </li>
+                    <li class="lang-select-container">
+                        <div class="lang-current">
+                            <img
+                                src="../../images/en.png"
+                                alt="en"
+                                class="flag-img"
+                            />
+                            <span>EN</span>
+                        </div>
+
+                        <ul class="lang-dropdown">
+                            <li>
+                                <a href="#">
+                                    <img
+                                        src="../../images/en.png"
+                                        alt="en"
+                                        class="flag-img"
+                                    />
+                                    <span>English</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../ru/routes.html">
+                                    <img
+                                        src="../../images/ru.png"
+                                        alt="ru"
+                                        class="flag-img"
+                                    />
+                                    <span>Русский</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="mini-routes-section" id="destinations">
+            <div class="mini-routes-container">
+                <h2>Popular Destinations</h2>
+                <p class="section-subtitle">
+                    20 most frequent routes from Prague. Choose your
+                    destination for quick booking.
+                </p>
+
+                <div class="mini-routes-grid">
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>
+                                Prague <span class="arrow">➔</span> Karlovy Vary
+                            </h3>
+                            <span class="mini-dist">📍 130 km</span>
+                        </div>
+                        <div class="mini-price-box">from €120</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Dresden</h3>
+                            <span class="mini-dist">📍 150 km</span>
+                        </div>
+                        <div class="mini-price-box">from €140</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>
+                                Prague <span class="arrow">➔</span> Český Krumlov
+                            </h3>
+                            <span class="mini-dist">📍 170 km</span>
+                        </div>
+                        <div class="mini-price-box">from €160</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Passau</h3>
+                            <span class="mini-dist">📍 220 km</span>
+                        </div>
+                        <div class="mini-price-box">from €210</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Linz</h3>
+                            <span class="mini-dist">📍 250 km</span>
+                        </div>
+                        <div class="mini-price-box">from €240</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Leipzig</h3>
+                            <span class="mini-dist">📍 260 km</span>
+                        </div>
+                        <div class="mini-price-box">from €250</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Wroclaw</h3>
+                            <span class="mini-dist">📍 290 km</span>
+                        </div>
+                        <div class="mini-price-box">from €280</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Nuremberg</h3>
+                            <span class="mini-dist">📍 300 km</span>
+                        </div>
+                        <div class="mini-price-box">from €290</div>
+                    </a>
+                    <a href="#book" class="mini-card featured">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Vienna</h3>
+                            <span class="mini-dist">📍 330 km</span>
+                        </div>
+                        <div class="mini-price-box">from €310</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>
+                                Prague <span class="arrow">➔</span> Bratislava
+                            </h3>
+                            <span class="mini-dist">📍 330 km</span>
+                        </div>
+                        <div class="mini-price-box">from €310</div>
+                    </a>
+                    <a href="#book" class="mini-card featured">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Berlin</h3>
+                            <span class="mini-dist">📍 350 km</span>
+                        </div>
+                        <div class="mini-price-box">from €330</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Munich</h3>
+                            <span class="mini-dist">📍 380 km</span>
+                        </div>
+                        <div class="mini-price-box">from €360</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>
+                                Prague <span class="arrow">➔</span> Salzburg
+                            </h3>
+                            <span class="mini-dist">📍 380 km</span>
+                        </div>
+                        <div class="mini-price-box">from €360</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Hallstatt</h3>
+                            <span class="mini-dist">📍 380 km</span>
+                        </div>
+                        <div class="mini-price-box">from €370</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Stuttgart</h3>
+                            <span class="mini-dist">📍 480 km</span>
+                        </div>
+                        <div class="mini-price-box">from €460</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Krakow</h3>
+                            <span class="mini-dist">📍 500 km</span>
+                        </div>
+                        <div class="mini-price-box">from €480</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>
+                                Prague <span class="arrow">➔</span> Frankfurt
+                            </h3>
+                            <span class="mini-dist">📍 510 km</span>
+                        </div>
+                        <div class="mini-price-box">from €490</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Budapest</h3>
+                            <span class="mini-dist">📍 530 km</span>
+                        </div>
+                        <div class="mini-price-box">from €510</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Zurich</h3>
+                            <span class="mini-dist">📍 690 km</span>
+                        </div>
+                        <div class="mini-price-box">from €680</div>
+                    </a>
+                    <a href="#book" class="mini-card">
+                        <div class="mini-info">
+                            <h3>Prague <span class="arrow">➔</span> Milan</h3>
+                            <span class="mini-dist">📍 870 km</span>
+                        </div>
+                        <div class="mini-price-box">from €850</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h4>EcoMove</h4>
+                        <p>
+                            Your trusted travel partner across Europe since 2021.
+                            Comfort, safety, and professionalism in every trip.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="./routes.html">Routes</a></li>
+                            <li><a href="./prices.html">Rates</a></li>
+                            <li><a href="../pages/gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Legal Information</h4>
+                        <ul>
+                            <li>
+                                <a href="../pages/privacy.html"
+                                    >Privacy Policy</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../pages/terms.html"
+                                    >Terms of Use</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../pages/agreement.html"
+                                    >User Agreement</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Contacts</h4>
+                        <p>📞 +420 *********</p>
+                        <p>📧 info@*****.com</p>
+                        <p>📍 Prague, Czech Republic</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 EcoMove. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="../../scripts/hamburger.js"></script>
+    </body>
+</html>
