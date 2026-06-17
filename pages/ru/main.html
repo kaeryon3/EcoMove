@@ -29,7 +29,10 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.css"
+        />
         <link rel="icon" type="image/x-icon" href="../../images/logo.png" />
     </head>
     <body>
@@ -50,12 +53,18 @@
                             <a href="#about" class="nav-link">О нас</a>
                         </li>
                         <li>
-                            <a href="./routes.html" class="nav-link">Маршруты</a>
+                            <a href="./routes.html" class="nav-link"
+                                >Маршруты</a
+                            >
                         </li>
                         <li>
                             <a href="./prices.html" class="nav-link">Тарифы</a>
                         </li>
-                        <li><a href="./gallery.html" class="nav-link">Галерея</a></li>
+                        <li>
+                            <a href="./gallery.html" class="nav-link"
+                                >Галерея</a
+                            >
+                        </li>
                         <li>
                             <a href="#contact" class="nav-link">Контакты</a>
                         </li>
@@ -123,46 +132,10 @@
                     </div>
                 </div>
 
-                <div class="search-container">
-                    <h2>Найдите вашу поездку</h2>
-                    <form class="search-form" id="searchForm">
-                        <div class="input-group">
-                            <label for="departure">Место посадки</label>
-                            <input
-                                type="text"
-                                id="departure"
-                                placeholder="Прага, Вена, Париж..."
-                                required
-                                autocomplete="off"
-                            />
-                            <span class="input-icon">📍</span>
-                        </div>
-
-                        <button
-                            type="button"
-                            class="swap-btn"
-                            aria-label="Поменять маршрут"
-                            title="Поменять маршрут"
-                        >
-                            ⇆
-                        </button>
-
-                        <div class="input-group">
-                            <label for="destination">Конечная точка</label>
-                            <input
-                                type="text"
-                                id="destination"
-                                placeholder="Куда ехать?"
-                                required
-                                autocomplete="off"
-                            />
-                            <span class="input-icon">🎯</span>
-                        </div>
-
-                        <button type="submit" class="search-btn">Поиск</button>
-                    </form>
+                <div class="hero-action">
+                    <h2 class="action-text">Запланируй свою поездку</h2>
+                    <a href="./prices.html" class="action-btn">Выбрать тариф</a>
                 </div>
-            </div>
         </section>
 
         <section class="about-section" id="about">
@@ -198,13 +171,17 @@
         <section class="quick-links">
             <div class="buttons">
                 <a class="glass-btn" href="#home"><span>Заказать</span></a>
-                <a class="glass-btn" href="pages/prices.html"><span>Тарифы</span></a>
-                <a class="glass-btn" href="pages/gallery.html"><span>Галерея</span></a>
+                <a class="glass-btn" href="pages/prices.html"
+                    ><span>Тарифы</span></a
+                >
+                <a class="glass-btn" href="pages/gallery.html"
+                    ><span>Галерея</span></a
+                >
             </div>
             <div class="contacts">
                 <h2>Свяжитесь с нами</h2>
-                <p>📞 +420 *********</p>
-                <p>📧 info@*****.com</p>
+                <p>📞 +420 721 573 048</p>
+                <p>📧 info@ecomove.com</p>
             </div>
         </section>
 
@@ -221,16 +198,6 @@
                     </div>
 
                     <div class="footer-section">
-                        <h4>Быстрые ссылки</h4>
-                        <ul>
-                            <li><a href="#home">Главная</a></li>
-                            <li><a href="pages/routes.html">Маршруты</a></li>
-                            <li><a href="pages/prices.html">Тарифы</a></li>
-                            <li><a href="pages/gallery.html">Галерея</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section">
                         <h4>Юридическая информация</h4>
                         <ul>
                             <li>
@@ -238,7 +205,11 @@
                                     >Политика конфиденциальности</a
                                 >
                             </li>
-                            <li><a href="pages/terms.html">Условия пользования</a></li>
+                            <li>
+                                <a href="pages/terms.html"
+                                    >Условия пользования</a
+                                >
+                            </li>
                             <li>
                                 <a href="pages/agreement.html"
                                     >Пользовательское соглашение</a
@@ -249,8 +220,8 @@
 
                     <div class="footer-section">
                         <h4>Контакты</h4>
-                        <p>📞 +420 *********</p>
-                        <p>📧 info@*****.com</p>
+                        <p>📞 +420 721 573 048</p>
+                        <p>📧 info@ecomove.com</p>
                         <p>📍 Прага, Чешская республика</p>
                     </div>
                 </div>
@@ -262,7 +233,6 @@
         </footer>
 
         <script src="../../scripts/hamburger.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
-        <script src="../../scripts/search.js"></script>
+        <script src="../../scripts/geoapify.js"></script>
     </body>
 </html>

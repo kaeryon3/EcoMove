@@ -1,18 +1,4 @@
-// Book button handlers
-const bookBtns = document.querySelectorAll('.book-btn');
-bookBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-        const vehicleCard = e.target.closest('.vehicle-card');
-        const vehicleTitle =
-            vehicleCard.querySelector('.vehicle-info h3').textContent;
-        const priceValue =
-            vehicleCard.querySelector('.price-value').textContent;
 
-        alert(
-            `Выбрана: ${vehicleTitle}\nЦена: ${priceValue}\n\nОформление бронирования будет добавлено позже.`,
-        );
-    });
-});
 // Mobile menu toggle with animation
 const hamburger = document.querySelector('.hamburger');
 const navbarMenu = document.querySelector('.navbar-menu');

@@ -89,12 +89,64 @@
     box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
 }
 
+/* Выпадающий список подсказок */
+.suggestions-list {
+    position: absolute;
+    top: 100%; /* Выравнивание ровно под инпутом */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 5px; /* Небольшой отступ от инпута */
+    padding: 0;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    
+    /* Скрываем по умолчанию, показываем через JS */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+
+.suggestions-list.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.suggestions-list li {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    color: #0f172a;
+    transition: background 0.2s ease;
+}
+
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+.suggestions-list li:hover {
+    background-color: #f1f5f9;
+    color: #f97316; /* Акцентный цвет при наведении, как на кнопке */
+}
+
+.input-group:focus-within {
+    z-index: 10;
+}
+
 /* Large screens */
 
 @media (min-width: 768px) {
     .search-form {
         display: grid;
-        grid-template-columns: 1fr 50px 1fr 160px;
+        grid-template-columns: minmax(150px, 1fr) 50px minmax(150px, 1fr) 140px;
         gap: 1.2rem;
         align-items: flex-end;
         padding: 2rem;
