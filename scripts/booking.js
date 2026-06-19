@@ -464,34 +464,38 @@ document.addEventListener('DOMContentLoaded', () => {
 `;
 
         // Send booking to Telegram
-        fetch(`https://api.telegram.org/bot8892445872:AAHCjAD4GBOtFgrOKjbBQ97zP14quKEHVrA/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: '6326660437',
-                text: messageText,
-                parse_mode: 'HTML'
-            })
-        })
-            .then(response => {
-                if (!response.ok) throw new Error('Telegram API error');
+        const chatIds = ['6326660437', '379428081'];
 
-                // Hide form elements
+        const telegramRequests = chatIds.map(chatId => {
+            return fetch(`https://api.telegram.org/bot8892445872:AAHCjAD4GBOtFgrOKjbBQ97zP14quKEHVrA/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: messageText,
+                    parse_mode: 'HTML'
+                })
+            }).then(res => {
+                if (!res.ok) throw new Error(`Error sending to ${chatId}`);
+                return res;
+            });
+        });
+
+        Promise.all(telegramRequests)
+            .then(() => {
                 Array.from(form.children).forEach(child => {
                     if (child !== submitBtn) child.style.display = 'none';
                 });
 
-                // Show success message
                 const successMsg = document.createElement('div');
                 successMsg.className = 'success-message';
                 successMsg.style.cssText = 'text-align: center; font-size: 1.3rem; color: #10b981; margin-bottom: 25px; font-weight: 600;';
+                successMsg.innerText = '';
                 form.insertBefore(successMsg, submitBtn);
 
-                // Update button
                 submitBtn.innerText = '✓';
                 submitBtn.classList.add('is-success');
 
-                // Reset form state
                 form.reset();
                 routeCoords = { from: null, to: null };
                 calculatedDistanceKm = 0;
@@ -499,14 +503,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (priceBox) priceBox.style.display = 'none';
                 form.querySelectorAll('.validation-group').forEach(el => el.classList.remove('has-success', 'has-error'));
 
-                // Close modal after delay
                 setTimeout(closeModal, 3500);
             })
             .catch(err => {
                 console.error(err);
-                alert('Error sending order. Please try again later.');
-                submitBtn.innerText = originalSubmitText;
-                submitBtn.style.opacity = '1';
             });
     });
 });
