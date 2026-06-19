@@ -71,6 +71,13 @@
     filter: brightness(1.1);
 }
 
+.submit-btn.is-success {
+    background-color: #10b981 !important;
+    cursor: default;
+    pointer-events: none;
+    opacity: 1 !important;
+}
+
 /* Row layout for side-by-side form groups */
 .form-row {
     display: flex;

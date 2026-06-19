@@ -114,7 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset form visibility
             Array.from(form.children).forEach(child => child.style.display = '');
             const submitBtn = form.querySelector('.submit-btn');
-            submitBtn.removeAttribute('style');
+            submitBtn.classList.remove('is-success');
+            submitBtn.style.opacity = '1';
+            submitBtn.style.pointerEvents = 'auto';
             submitBtn.innerText = originalSubmitText;
 
             // Auto-select tariff based on card
@@ -196,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         groupElement.classList.toggle('has-error', !isValid);
         return isValid;
     }
-    
+
     // Real-time validation for passengers and luggage inputs
     passengersInput.addEventListener('input', () => {
         const passVal = parseInt(passengersInput.value, 10);
@@ -379,10 +381,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // NUMBER CONTROLS (PLUS/MINUS)
     // ======================================
     document.querySelectorAll('.num-btn').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const targetId = this.getAttribute('data-target');
             const input = document.getElementById(targetId);
-            
+
             let value = parseInt(input.value, 10) || 0;
             const min = parseInt(input.getAttribute('min'), 10) || 0;
             const max = parseInt(input.getAttribute('max'), 10) || 100;
@@ -487,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Update button
                 submitBtn.innerText = '✓';
-                submitBtn.style.cssText = 'width: 100%; padding: 1rem; border-radius: 8px; font-weight: 600; background: #10b981; border: none; color: white; font-size: 1.6rem; cursor: default; pointer-events: none; background-image: none; opacity: 1;';
+                submitBtn.classList.add('is-success');
 
                 // Reset form state
                 form.reset();
