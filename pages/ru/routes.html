@@ -1,318 +1,411 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="EcoMove - надежный сервис перевозок между городами Европы. Заказывайте легковые, грузовые автомобили и микроавтобусы."
-        />
-        <meta
-            name="keywords"
-            content="такси, перевозки, трансфер, Прага, Вена, Париж"
-        />
-        <meta name="theme-color" content="#1a1a1a" />
-        <title>Перевозки по Европе</title>
-        <link rel="stylesheet" href="../../styles/common/variables.css" />
-        <link rel="stylesheet" href="../../styles/common/animations.css" />
-        <link rel="stylesheet" href="../../styles/common/base.css" />
-        <link rel="stylesheet" href="../../styles/common/navbar.css" />
-        <link rel="stylesheet" href="../../styles/common/footer.css" />
 
-        <link rel="stylesheet" href="../../styles/routes/style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="EcoTransfer - надежный сервис перевозок между городами Европы. Заказывайте легковые, грузовые автомобили и микроавтобусы." />
+    <meta name="keywords" content="такси, перевозки, трансфер, Прага, Вена, Париж" />
+    <meta name="theme-color" content="#1a1a1a" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Маршруты и цены трансферов | EcoTransfer" />
+    <meta property="og:description" content="Узнайте популярные направления трансферов из Праги в Вену, Париж, Мюнхен. Комфортные поездки по Европе с EcoTransfer." />
+    <meta property="og:site_name" content="EcoTransfer" />
+    <meta property="og:locale" content="ru_RU" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+    <title>Маршруты и направления | EcoTransfer — Перевозки по Европе</title>
+    <link rel="stylesheet" href="../../styles/common/variables.css" />
+    <link rel="stylesheet" href="../../styles/common/animations.css" />
+    <link rel="stylesheet" href="../../styles/common/base.css" />
+    <link rel="stylesheet" href="../../styles/common/modal.css" />
+    <link rel="stylesheet" href="../../styles/common/form.css" />
+    <link rel="stylesheet" href="../../styles/common/price-calc.css" />
+    <link rel="stylesheet" href="../../styles/common/autocomplete.css" />
+    <link rel="stylesheet" href="../../styles/common/navbar.css" />
+    <link rel="stylesheet" href="../../styles/common/footer.css" />
 
-        <link rel="icon" type="image/x-icon" href="../../images/logo.png" />
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="navbar-logo">
-                    <a href="../../index.html">
-                        <img
-                            src="../../images/logo.png"
-                            alt="EcoMove Logo"
-                            class="logo-icon"
-                        />
-                    </a>
-                </div>
-                <ul class="navbar-menu">
-                    <li>
-                        <a href="main.html" class="nav-link">Главная</a>
-                    </li>
-                    <li>
-                        <a href="routes.html" class="nav-link">Маршруты</a>
-                    </li>
-                    <li>
-                        <a href="prices.html" class="nav-link"
-                            >Тарифы</a
-                        >
-                    </li>
-                    <li>
-                        <a href="gallery.html" class="nav-link"
-                            >Галерея</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#contact" class="nav-link">Контакты</a>
-                    </li>
-                    <li class="lang-select-container">
-                        <div class="lang-current">
-                            <img
-                                src="../../images/ru.png"
-                                alt="ru"
-                                class="flag-img"
-                            />
-                            <span>RU</span>
-                        </div>
+    <link rel="stylesheet" href="../../styles/routes/style.css" />
 
-                        <ul class="lang-dropdown">
-                            <li>
-                                <a href="#">
-                                    <img
-                                        src="../../images/ru.png"
-                                        alt="ru"
-                                        class="flag-img"
-                                    />
-                                    <span>Русский</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../en/routes.html">
-                                    <img
-                                        src="../../images/en.png"
-                                        alt="en"
-                                        class="flag-img"
-                                    />
-                                    <span>English</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Популярные маршруты трансферов",
+        "description": "Список доступных направлений для частных и групповых перевозок по Европе от EcoTransfer.",
+        "breadcrumb": "Главная > Маршруты"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="./main.html">
+                    <img src="../../images/logo.png" alt="EcoTransfer Logo" class="logo-icon" />
+                </a>
             </div>
-        </nav>
-
-        <section class="mini-routes-section" id="destinations">
-            <div class="mini-routes-container">
-                <h2>Популярные направления</h2>
-                <p class="section-subtitle">
-                    20 самых частых маршрутов из Праги. Выберите ваше
-                    направление для быстрого бронирования.
-                </p>
-
-                <div class="mini-routes-grid">
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>
-                                Прага <span class="arrow">➔</span> Карловы Вары
-                            </h3>
-                            <span class="mini-dist">📍 130 км</span>
-                        </div>
-                        <div class="mini-price-box">от €120</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Дрезден</h3>
-                            <span class="mini-dist">📍 150 км</span>
-                        </div>
-                        <div class="mini-price-box">от €140</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>
-                                Прага <span class="arrow">➔</span> Чески-Крумлов
-                            </h3>
-                            <span class="mini-dist">📍 170 км</span>
-                        </div>
-                        <div class="mini-price-box">от €160</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Пассау</h3>
-                            <span class="mini-dist">📍 220 км</span>
-                        </div>
-                        <div class="mini-price-box">от €210</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Линц</h3>
-                            <span class="mini-dist">📍 250 км</span>
-                        </div>
-                        <div class="mini-price-box">от €240</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Лейпциг</h3>
-                            <span class="mini-dist">📍 260 км</span>
-                        </div>
-                        <div class="mini-price-box">от €250</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Вроцлав</h3>
-                            <span class="mini-dist">📍 290 км</span>
-                        </div>
-                        <div class="mini-price-box">от €280</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Нюрнберг</h3>
-                            <span class="mini-dist">📍 300 км</span>
-                        </div>
-                        <div class="mini-price-box">от €290</div>
-                    </a>
-                    <a href="#book" class="mini-card featured">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Вена</h3>
-                            <span class="mini-dist">📍 330 км</span>
-                        </div>
-                        <div class="mini-price-box">от €310</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>
-                                Прага <span class="arrow">➔</span> Братислава
-                            </h3>
-                            <span class="mini-dist">📍 330 км</span>
-                        </div>
-                        <div class="mini-price-box">от €310</div>
-                    </a>
-                    <a href="#book" class="mini-card featured">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Берлин</h3>
-                            <span class="mini-dist">📍 350 км</span>
-                        </div>
-                        <div class="mini-price-box">от €330</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Мюнхен</h3>
-                            <span class="mini-dist">📍 380 км</span>
-                        </div>
-                        <div class="mini-price-box">от €360</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>
-                                Прага <span class="arrow">➔</span> Зальцбург
-                            </h3>
-                            <span class="mini-dist">📍 380 км</span>
-                        </div>
-                        <div class="mini-price-box">от €360</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Гальштат</h3>
-                            <span class="mini-dist">📍 380 км</span>
-                        </div>
-                        <div class="mini-price-box">от €370</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Штутгарт</h3>
-                            <span class="mini-dist">📍 480 км</span>
-                        </div>
-                        <div class="mini-price-box">от €460</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Краков</h3>
-                            <span class="mini-dist">📍 500 км</span>
-                        </div>
-                        <div class="mini-price-box">от €480</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>
-                                Прага <span class="arrow">➔</span> Франкфурт
-                            </h3>
-                            <span class="mini-dist">📍 510 км</span>
-                        </div>
-                        <div class="mini-price-box">от €490</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Будапешт</h3>
-                            <span class="mini-dist">📍 530 км</span>
-                        </div>
-                        <div class="mini-price-box">от €510</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Цюрих</h3>
-                            <span class="mini-dist">📍 690 км</span>
-                        </div>
-                        <div class="mini-price-box">от €680</div>
-                    </a>
-                    <a href="#book" class="mini-card">
-                        <div class="mini-info">
-                            <h3>Прага <span class="arrow">➔</span> Милан</h3>
-                            <span class="mini-dist">📍 870 км</span>
-                        </div>
-                        <div class="mini-price-box">от €850</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer" id="contact">
-            <div class="footer-container">
-                <div class="footer-grid">
-                    <div class="footer-section">
-                        <h4>EcoMove</h4>
-                        <p>
-                            Надежный партнер в путешествиях по Европе с 2021
-                            года. Комфорт, безопасность и профессионализм в
-                            каждой поездке
-                        </p>
+            <ul class="navbar-menu">
+                <li>
+                    <a href="main.html" class="nav-link">Главная</a>
+                </li>
+                <li>
+                    <a href="routes.html" class="nav-link">Маршруты</a>
+                </li>
+                <li>
+                    <a href="prices.html" class="nav-link">Тарифы</a>
+                </li>
+                <li>
+                    <a href="gallery.html" class="nav-link">Галерея</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link">Контакты</a>
+                </li>
+                <li class="lang-select-container">
+                    <div class="lang-current">
+                        <img src="../../images/ru.png" alt="ru" class="flag-img" />
+                        <span>RU</span>
                     </div>
 
-                    <div class="footer-section">
-                        <h4>Юридическая информация</h4>
-                        <ul>
-                            <li>
-                                <a href="../pages/privacy.html"
-                                    >Политика конфиденциальности</a
-                                >
-                            </li>
-                            <li>
-                                <a href="../pages/terms.html"
-                                    >Условия пользования</a
-                                >
-                            </li>
-                            <li>
-                                <a href="../pages/agreement.html"
-                                    >Пользовательское соглашение</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="lang-dropdown">
+                        <li>
+                            <a href="#">
+                                <img src="../../images/ru.png" alt="ru" class="flag-img" />
+                                <span>Русский</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../en/routes.html">
+                                <img src="../../images/en.png" alt="en" class="flag-img" />
+                                <span>English</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-                    <div class="footer-section">
-                        <h4>Контакты</h4>
-                        <p>📞 +420 *********</p>
-                        <p>📧 info@*****.com</p>
-                        <p>📍 Прага, Чешская республика</p>
+    <section class="mini-routes-section" id="destinations">
+        <div class="mini-routes-container">
+            <h2>Популярные направления</h2>
+            <p class="section-subtitle">
+                20 самых частых маршрутов из Праги. Выберите ваше
+                направление для быстрого бронирования.
+            </p>
+
+            <div class="mini-routes-grid">
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>
+                            Прага <span class="arrow">⮂</span> Карловы Вары
+                        </h3>
+                        <span class="mini-dist">📍 130 км</span>
                     </div>
+                    <div class="mini-price-box">от €120</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Дрезден</h3>
+                        <span class="mini-dist">📍 150 км</span>
+                    </div>
+                    <div class="mini-price-box">от €140</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>
+                            Прага <span class="arrow">⮂</span> Чески-Крумлов
+                        </h3>
+                        <span class="mini-dist">📍 170 км</span>
+                    </div>
+                    <div class="mini-price-box">от €160</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Пассау</h3>
+                        <span class="mini-dist">📍 220 км</span>
+                    </div>
+                    <div class="mini-price-box">от €210</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Линц</h3>
+                        <span class="mini-dist">📍 250 км</span>
+                    </div>
+                    <div class="mini-price-box">от €240</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Лейпциг</h3>
+                        <span class="mini-dist">📍 260 км</span>
+                    </div>
+                    <div class="mini-price-box">от €250</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Вроцлав</h3>
+                        <span class="mini-dist">📍 290 км</span>
+                    </div>
+                    <div class="mini-price-box">от €280</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Нюрнберг</h3>
+                        <span class="mini-dist">📍 300 км</span>
+                    </div>
+                    <div class="mini-price-box">от €290</div>
+                </a>
+                <a href="./prices.html" class="mini-card featured">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Вена</h3>
+                        <span class="mini-dist">📍 330 км</span>
+                    </div>
+                    <div class="mini-price-box">от €310</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>
+                            Прага <span class="arrow">⮂</span> Братислава
+                        </h3>
+                        <span class="mini-dist">📍 330 км</span>
+                    </div>
+                    <div class="mini-price-box">от €310</div>
+                </a>
+                <a href="./prices.html" class="mini-card featured">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Берлин</h3>
+                        <span class="mini-dist">📍 350 км</span>
+                    </div>
+                    <div class="mini-price-box">от €330</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Мюнхен</h3>
+                        <span class="mini-dist">📍 380 км</span>
+                    </div>
+                    <div class="mini-price-box">от €360</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>
+                            Прага <span class="arrow">⮂</span> Зальцбург
+                        </h3>
+                        <span class="mini-dist">📍 380 км</span>
+                    </div>
+                    <div class="mini-price-box">от €360</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Гальштат</h3>
+                        <span class="mini-dist">📍 380 км</span>
+                    </div>
+                    <div class="mini-price-box">от €370</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Штутгарт</h3>
+                        <span class="mini-dist">📍 480 км</span>
+                    </div>
+                    <div class="mini-price-box">от €460</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Краков</h3>
+                        <span class="mini-dist">📍 500 км</span>
+                    </div>
+                    <div class="mini-price-box">от €480</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>
+                            Прага <span class="arrow">⮂</span> Франкфурт
+                        </h3>
+                        <span class="mini-dist">📍 510 км</span>
+                    </div>
+                    <div class="mini-price-box">от €490</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Будапешт</h3>
+                        <span class="mini-dist">📍 530 км</span>
+                    </div>
+                    <div class="mini-price-box">от €510</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Цюрих</h3>
+                        <span class="mini-dist">📍 690 км</span>
+                    </div>
+                    <div class="mini-price-box">от €680</div>
+                </a>
+                <a href="./prices.html" class="mini-card">
+                    <div class="mini-info">
+                        <h3>Прага <span class="arrow">⮂</span> Милан</h3>
+                        <span class="mini-dist">📍 870 км</span>
+                    </div>
+                    <div class="mini-price-box">от €850</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>EcoTransfer</h4>
+                    <p>
+                        Надежный партнер в путешествиях по Европе с 2021
+                        года. Комфорт, безопасность и профессионализм в
+                        каждой поездке
+                    </p>
                 </div>
 
-                <div class="footer-bottom">
-                    <p>&copy; 2024 EcoMove. Все права защищены.</p>
+                <div class="footer-section">
+                    <h4>Юридическая информация</h4>
+                    <ul>
+                        <li>
+                            <a href="../pages/privacy.html">Политика конфиденциальности</a>
+                        </li>
+                        <li>
+                            <a href="../pages/terms.html">Условия пользования</a>
+                        </li>
+                        <li>
+                            <a href="../pages/agreement.html">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>📞 +420 *********</p>
+                    <p>📧 info@*****.com</p>
+                    <p>📍 Прага, Чешская республика</p>
                 </div>
             </div>
-        </footer>
-        <script src="../../scripts/hamburger.js"></script>
-    </body>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoTransfer. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Закрыть">&times;</button>
+            <h3>Оформление заказа</h3>
+            <form id="bookingForm" class="booking-form" novalidate>
+
+                <div class="form-group">
+                    <div class="form-group validation-group">
+                        <label for="userEmail">Электронная почта</label>
+                        <input type="email" id="userEmail" name="email" placeholder="Введите электронный адрес"
+                            required />
+                        <span class="error-msg">Введите корректный email адрес</span>
+                    </div>
+
+                    <div class="form-group validation-group">
+                        <label for="userPhone">Номер телефона</label>
+                        <input type="tel" id="userPhone" name="phone" value="+420 " placeholder="+420 123 456 789"
+                            required />
+                        <span class="error-msg">Введите корректный номер телефона</span>
+                    </div>
+                    <div class="form-group validation-group" id="tariffGroup">
+                        <label for="tariffSelect">Выбранный тариф</label>
+                        <div class="custom-select-wrapper">
+                            <select id="tariffSelect" name="tariff" required>
+                                <option value="" disabled selected>Выберите тариф</option>
+                                <option value="econom">Эконом (Skoda Octavia)</option>
+                                <option value="standard">Стандарт (Toyota Camry)</option>
+                                <option value="business-s">Бизнес (Mercedes E-Class)</option>
+                                <option value="business-v">Бизнес (Mercedes V-Class)</option>
+                                <option value="cargo">Грузовой (Mercedes Vito)</option>
+                                <option value="microbus">Микроавтобус (Mercedes Sprinter)</option>
+                            </select>
+                        </div>
+                        <span class="error-msg">Пожалуйста, выберите тариф</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group validation-group">
+                        <label for="passengersCount">Пассажиры</label>
+                        <div class="number-control">
+                            <button type="button" class="num-btn minus" data-target="passengersCount">&minus;</button>
+                            <input type="number" id="passengersCount" name="passengers" min="1" max="20" value="1"
+                                required />
+                            <button type="button" class="num-btn plus" data-target="passengersCount">&plus;</button>
+                        </div>
+                        <span class="error-msg">Укажите от 1</span>
+                    </div>
+
+                    <div class="form-group validation-group">
+                        <label for="luggageCount">Чемоданы</label>
+                        <div class="number-control">
+                            <button type="button" class="num-btn minus" data-target="luggageCount">&minus;</button>
+                            <input type="number" id="luggageCount" name="luggage" min="0" max="20" value="0" required />
+                            <button type="button" class="num-btn plus" data-target="luggageCount">&plus;</button>
+                        </div>
+                        <span class="error-msg">Укажите от 0</span>
+                    </div>
+                </div>
+
+                <div class="form-group validation-group" id="dateGroup">
+                    <label for="dateTime">Дата и время подачи</label>
+                    <input type="text" id="dateTime" name="datetime" placeholder="Выберите дату и время" readonly
+                        required />
+                    <span class="error-msg">Выберите дату и время</span>
+                </div>
+
+                <div class="form-group validation-group" id="fromGroup">
+                    <label for="addressFrom">Откуда</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" id="addressFrom" placeholder="Город, улица, дом" autocomplete="off" required>
+                        <div id="fromList" class="autocomplete-list"></div>
+                    </div>
+                    <span class="error-msg">Выберите адрес отправления из списка</span>
+                </div>
+
+                <div class="form-group validation-group" id="toGroup">
+                    <label for="addressTo">Куда</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" id="addressTo" placeholder="Куда едем?" autocomplete="off" required>
+                        <div id="toList" class="autocomplete-list"></div>
+                    </div>
+                    <span class="error-msg">Выберите адрес назначения из списка</span>
+                </div>
+
+                <div class="price-calculation-box" id="priceBox" style="display: none;">
+                    <div class="price-info">
+                        <span class="distance-text" id="distanceText">Дистанция: 0 км</span>
+                        <span class="price-text" id="priceText">0.00 €</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="book-btn book-btn-featured submit-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="../../scripts/hamburger.js"></script>
+    <script src="../../scripts/booking.js"></script>
+</body>
+
 </html>

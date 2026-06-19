@@ -1,0 +1,133 @@
+/* Modal overlay - dark background with blur effect */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal content container */
+.modal-content {
+    background: #121212;
+    border: 2px solid rgba(255, 140, 66, 0.5);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 140, 66, 0.3);
+    border-radius: 10px;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Close button styling */
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #ff8c42;
+}
+
+/* Modal heading */
+.modal-content h3 {
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.number-control {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 140, 66, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 48px;
+}
+
+.number-control input {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: #f8fafc;
+    font-size: 1.1rem;
+    padding: 0;
+    outline: none;
+}
+
+.num-btn {
+    background: transparent;
+    color: #ff8c42;
+    border: none;
+    width: 48px;
+    height: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.num-btn:hover {
+    background: rgba(255, 140, 66, 0.2);
+    color: #ffffff;
+}
+
+.num-btn:active {
+    background: rgba(255, 140, 66, 0.4);
+}

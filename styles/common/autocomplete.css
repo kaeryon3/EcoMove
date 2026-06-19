@@ -1,0 +1,55 @@
+/* Autocomplete wrapper positioning */
+.autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Autocomplete list container */
+.autocomplete-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    z-index: 999999 !important;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.autocomplete-list.active {
+    display: block;
+}
+
+/* Scrollbar styling for autocomplete list */
+.autocomplete-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.autocomplete-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Individual autocomplete items */
+.autocomplete-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item:hover {
+    background: rgba(255, 140, 66, 0.1);
+    color: #ff8c42;
+}

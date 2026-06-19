@@ -1,0 +1,112 @@
+/* Page Header — Баннер с использованием ваших параметров hero */
+.page-header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('../../images/hero.jpg') center / cover no-repeat fixed #0c0c0c;
+    color: white;
+    padding: 5rem 1rem 3rem 1rem;
+    text-align: center;
+    display: block;
+}
+
+.page-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header-content h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Inter', sans-serif;
+}
+
+.page-header-content p {
+    font-size: 1rem;
+    color: #bfdbfe;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* Terms Section — Контейнер на базе вашей about-секции */
+.terms-section {
+    padding: 3rem 1rem;
+    background: #dcdcdc; /* Цвет фона из .about-section */
+    min-height: 100vh;
+    display: block;
+}
+
+.terms-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 2rem 1.5rem;
+}
+
+.terms-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.terms-content h2:first-child {
+    margin-top: 0;
+}
+
+.terms-content p {
+    font-size: 1.1rem;
+    color: #475569; /* Цвет текста из .about-content p */
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    margin: 0 0 1.2rem 0;
+}
+
+.terms-content ul {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.terms-content li {
+    margin-bottom: 0.6rem;
+}
+
+.terms-content strong {
+    color: #0f172a;
+}
+
+/* Настройки адаптивности */
+@media (min-width: 768px) {
+    .page-header {
+        padding: 7rem 2rem 4rem 2rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .privacy-container {
+        padding: 4rem;
+    }
+
+    .terms-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .terms-content p, 
+    .terms-content ul {
+        font-size: 1.2rem;
+    }
+}

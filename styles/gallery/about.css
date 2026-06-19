@@ -1,19 +1,13 @@
-/* ========================================
-GALLERY SECTION (DARK STYLE)
-======================================== */
+/* Gallery */
 
 .gallery-section {
-    /* 🌟 ИЗМЕНЕНО: увеличен верхний отступ под мобильный навбар */
     padding: 8rem 1rem 4rem 1rem;
-    background: #121212; /* Единый благородный темный фон */
+    background: #121212;
     position: relative;
     color: #ffffff;
-    
-    /* 🌟 ДОБАВЛЕНО: фикс, чтобы навбар не съедал заголовок при клике по ссылке меню */
     scroll-margin-top: 4rem; 
 }
 
-/* Элегантные темные круги на фоне, адаптированные под твой дизайн */
 .gallery-section::before {
     content: '';
     position: absolute;
@@ -50,7 +44,6 @@ GALLERY SECTION (DARK STYLE)
     margin-top: 2rem;
 }
 
-/* Элемент галереи в стиле твоих темных карточек */
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -63,11 +56,10 @@ GALLERY SECTION (DARK STYLE)
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
 
-/* Фирменное подсвечивание оранжевой рамкой и легкое увеличение */
 .gallery-item:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    border-color: #ff8c42; /* Твой оранжевый акцент */
+    border-color: #ff8c42;
 }
 
 .gallery-item img {
@@ -75,35 +67,29 @@ GALLERY SECTION (DARK STYLE)
     height: 100%;
     object-fit: cover;
     transition: all 0.4s ease;
-    opacity: 0.85; /* Слегка приглушаем картинку в спокойном состоянии */
+    opacity: 0.85;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* Твой оригинальный плавный наезд камеры */
+    transform: scale(1.1);
     opacity: 1;
 }
 
-/* Подписи к фото на темном фоне */
 .gallery-item figcaption {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    /* Затемнение снизу для читаемости текста */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
     color: #f1f5f9;
     padding: 1.5rem 1rem 1rem;
     font-size: 0.95rem;
     font-weight: 600;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
 
-.gallery-item:hover figcaption {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Large Screens */
 
-/* Медиа-запросы для адаптивности */
 @media (min-width: 640px) {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -121,7 +107,6 @@ GALLERY SECTION (DARK STYLE)
 
 @media (min-width: 768px) {
     .gallery-section {
-        /* 🌟 ИЗМЕНЕНО: на десктопах еще сильнее отодвигаем контент вниз из-за высокой шапки */
         padding: 11rem 2rem 6rem 2rem;
     }
 
