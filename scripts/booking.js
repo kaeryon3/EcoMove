@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceBox = document.getElementById('priceBox');
     const distanceText = document.getElementById('distanceText');
     const priceText = document.getElementById('priceText');
+    const flightInput = document.getElementById('flightNumber');
 
     const originalSubmitText = form.querySelector('.submit-btn').textContent.trim();
 
@@ -455,6 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
 🚗 <b>Тариф:</b> ${tariffSelect.options[tariffSelect.selectedIndex].text}
 👥 <b>Пассажиров:</b> ${passengersInput.value}
 🧳 <b>Чемоданов:</b> ${luggageInput.value}
+✈️ <b>Рейс:</b> ${flightInput.value.trim()}
 
 📍 <b>Откуда:</b> ${document.getElementById('addressFrom').value}
 🏁 <b>Куда:</b> ${document.getElementById('addressTo').value}
