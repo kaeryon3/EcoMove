@@ -100,6 +100,8 @@ input[type="number"] {
 .number-control input {
     flex: 1;
     height: 100%;
+    width: 60px;
+    height: 44px;
     text-align: center;
     border: none;
     background: transparent;
@@ -113,14 +115,18 @@ input[type="number"] {
     background: transparent;
     color: #ff8c42;
     border: none;
-    width: 48px;
-    height: 100%;
-    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s, color 0.2s;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .num-btn:hover {
@@ -130,4 +136,13 @@ input[type="number"] {
 
 .num-btn:active {
     background: rgba(255, 140, 66, 0.4);
+}
+
+/* Preventing zoom on IOs */
+@media (max-width: 768px) {
+    .booking-form input,
+    .booking-form select,
+    .number-control input {
+        font-size: 16px;
+    }
 }

@@ -161,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dateFormat: "d.m.Y H:i",
         minDate: "today",
         time_24hr: true,
-        disableMobile: "true",
         onChange: function (selectedDates, dateStr) {
             if (dateStr) {
                 dateGroup.classList.remove('has-error');
@@ -463,26 +462,21 @@ document.addEventListener('DOMContentLoaded', () => {
 💶 <b>Стоимость:</b> ${finalPrice} €
 `;
 
-        // Send booking to Telegram
-        const chatIds = ['6326660437', '379428081'];
+// Send booking to Telegram
 
-        const telegramRequests = chatIds.map(chatId => {
-            return fetch(`https://api.telegram.org/bot8892445872:AAHCjAD4GBOtFgrOKjbBQ97zP14quKEHVrA/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: messageText,
-                    parse_mode: 'HTML'
-                })
-            }).then(res => {
-                if (!res.ok) throw new Error(`Error sending to ${chatId}`);
-                return res;
-            });
-        });
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwBucz0J0x4Iku0Joc-5ND6Fs38SBmuAwhVgmVN6rm-qRvw2S8mw_oDUUAXsIXoK63Q/exec'
 
-        Promise.all(telegramRequests)
-            .then(() => {
+        fetch(SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+                messageText: messageText
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success) throw new Error('Error');
+
                 Array.from(form.children).forEach(child => {
                     if (child !== submitBtn) child.style.display = 'none';
                 });
