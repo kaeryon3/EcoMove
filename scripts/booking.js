@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Send booking to Telegram
 
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwBucz0J0x4Iku0Joc-5ND6Fs38SBmuAwhVgmVN6rm-qRvw2S8mw_oDUUAXsIXoK63Q/exec'
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyxKMkh93EQ9C9MR07FPdzSK_09U4OKHDjWju0yJQMP8OiHsFQWBYBhjx3gxWeFyfEj/exec'
 
         fetch(SCRIPT_URL, {
             method: 'POST',
