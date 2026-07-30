@@ -1,4 +1,4 @@
-# 🚗 EcoMove — Commercial Transfer & Mobility Platform
+# 🚗 EcoTransfer — Commercial Transfer & Mobility Platform
 
 [![Live Site](https://img.shields.io/badge/Production-ecotransferprague.com-00C853?style=flat-square&logo=googlechrome&logoColor=white)](https://ecotransferprague.com)
 [![Tech Stack](https://img.shields.io/badge/Tech_Stack-Vanilla_JS_%7C_HTML5_%7C_CSS3-blue?style=flat-square)](https://ecotransferprague.com)
